@@ -28,7 +28,7 @@ namespace CxCE_Demo
             cmd.CommandText = "SELECT NAME FROM Users WHERE ID = @ID";
 cmd.CommandType = CommandType.Text;
 cmd.Connection = conn;
-
+//ido neamani
 // Add parameter to the command
 cmd.Parameters.AddWithValue("@ID", ID);
 
