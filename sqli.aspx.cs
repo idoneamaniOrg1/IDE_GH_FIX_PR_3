@@ -25,6 +25,7 @@ namespace CxCE_Demo
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
 
+            // ido neamani priv branch
             cmd.CommandText = "SELECT NAME FROM Users WHERE ID = @ID";
 cmd.CommandType = CommandType.Text;
 cmd.Connection = conn;
