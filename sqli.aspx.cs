@@ -33,7 +33,8 @@ namespace CxCE_Demo
             if (reader.HasRows)
             {
                 username = reader["NAME"].ToString();
-                age = getAge(username);
+                string san_username = AntiXss.HtmlEncode(username);
+                age = getAge(san_username);
             }
 
             message.Text = "Welcome " + username;
