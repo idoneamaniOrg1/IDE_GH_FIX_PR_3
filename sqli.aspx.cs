@@ -28,7 +28,7 @@ namespace CxCE_Demo
             cmd.CommandText = "SELECT NAME FROM Users WHERE ID = " + ID;
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
-
+            // test rebase comment
             conn.Open();
 
             reader = cmd.ExecuteReader();
