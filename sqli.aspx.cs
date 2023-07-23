@@ -47,10 +47,8 @@ namespace CxCE_Demo
             SqlConnection conn = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=" + Constants.DB_PASSWORD + ";");
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
+		cmd.CommandText = "SELECT NAME FROM Users WHERE ID = @ID"; cmd.CommandType = CommandType.Text; cmd.Connection = conn; // Add parameter to the command cmd.Parameters.AddWithValue("@ID", ID);
 
-            cmd.CommandText = "SELECT AGE FROM Users WHERE NAME = '" + name + "'";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conn;
 
             conn.Open();
 
